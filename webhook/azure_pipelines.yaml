@@ -1,0 +1,22 @@
+# This file is not necessary if you don't use azure pipl to build image
+pr: none
+trigger:
+  branches:
+    include:
+    - master
+    - resize-sts-operator
+resources:
+  repositories:
+  - repository: # INPUT YOUR REPO #
+    type: git
+    name: ".../...build"
+    ref: stable
+stages:
+- stage: build_image
+  jobs:
+  - template: build-job.yml@templates
+    parameters:
+      job: build_image_webhook_server
+      imageName: webhook_server
+      dockerfilePath: resize-statefulset-operator/webhook/Dockerfile
+      buildContextPath: resize-statefulset-operator/webhook/

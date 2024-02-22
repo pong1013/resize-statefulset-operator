@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webhook
+  labels:
+    {{- include "rso-webhook-server.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  externalIPs:
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "rso-webhook-server.selectorLabels" . | nindent 4 }}

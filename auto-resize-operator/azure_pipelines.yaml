@@ -1,0 +1,22 @@
+## This file is not necessary if you don't use azure pipl to build image
+pr: none
+trigger:
+  branches:
+    include:
+    - master
+    - resize-statefulset-operator
+resources:
+  repositories:
+  - repository: # ENTER YOUR REPO #
+    type:
+    name:
+    ref:
+stages:
+- stage: build_image
+  jobs:
+  - template: # ENTER YOUR TEMPLATE #
+    parameters:
+      job: build_image_auto_resize_operator
+      imageName: auto_resize_operator
+      dockerfilePath: resize-statefulset-operator/auto-resize-operator/Dockerfile
+      buildContextPath: resize-statefulset-operator/auto-resize-operator/
