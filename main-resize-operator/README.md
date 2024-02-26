@@ -15,7 +15,7 @@ Add annotation with new size:
 
 **2. Add local config**
 
-- Using a local kubeconfig allows you to execute `webhook.py` locally to test if the operator is running smoothly. Once you've confirmed there are no issues, you can then build the image and deploy it to Kubernetes.
+- Using a local kubeconfig allows you to execute `resize-sts-operator.py` locally to test if the operator is running smoothly. Once you've confirmed there are no issues, you can then build the image and deploy it to Kubernetes.
   ```python
   # local load kubeconfig
   config.load_kube_config("PATH TO KUBECONFIG")
@@ -27,7 +27,7 @@ Add annotation with new size:
 
 **4. Deploy to k8s**
 
-- `helm install webhook ./`
+- `helm install resize-statefulset-operator ./`
 
 
 ## Workflow
