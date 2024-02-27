@@ -1,4 +1,4 @@
-# Automatically Update Statefulset
+# Automated Resizing PVC disk
 ![k8s](https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kubernetes_logo.svg/798px-Kubernetes_logo.svg.png)
 
 ---
