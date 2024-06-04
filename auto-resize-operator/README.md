@@ -7,6 +7,7 @@ Add annotation with true:
 
 `"resize-statefulset-operator/auto-scaled": "true"`
 
+![plot](../images/auto-resize.png)
 
 ## Setup
 **1. Install Crossplane CRDs**
