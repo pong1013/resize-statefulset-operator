@@ -1,6 +1,6 @@
 # Manually Resize Operator
 This Python script operator monitors StatefulSets across all namespaces in a Kubernetes cluster and adjusts the size of their PersistentVolumeClaims (PVCs) based on annotations provided in the StatefulSet metadata.
-
+![plot](../images/resize.png)
 ### How to resize manually?
 Add annotation with new size:
 - `"resize-statefulset-operator/resize-{vc}": "10Gi"` -> `"resize-statefulset-operator/resize-0": "10Gi"`
