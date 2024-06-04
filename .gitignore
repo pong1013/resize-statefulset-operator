@@ -1,0 +1,38 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+*.DS_Store
+
+# Kubernetes
+kubeconfig
+*.yaml
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Virtual Environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# General
+logs/
+*.log
+*.pid
+*.out
+*.err
+
+# MacOS
+.DS_Store

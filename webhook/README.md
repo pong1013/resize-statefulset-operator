@@ -7,7 +7,7 @@ If you want to become familiar with k8s webhook. I recommand this page by [Krist
 ## Setup Webhook
 **1. Generate SAN Cert**
 
-- Generate your own SAN cert in */cert* folder.([here](https://github.com/pong1013/resize-statefulset-operator/tree/main/webhook/cert))
+- Generate your own SAN cert in `./cert` folder.([here](https://github.com/pong1013/resize-statefulset-operator/tree/main/webhook/cert))
 
 **2. Add local config**
 
@@ -19,7 +19,7 @@ If you want to become familiar with k8s webhook. I recommand this page by [Krist
 
 **3. Build Image**
 
-- You can use `Docker` or `Azure Pipeline` to build image
+- `docker build`
 
 **4. Deploy to k8s**
 

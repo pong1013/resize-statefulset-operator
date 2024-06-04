@@ -26,7 +26,7 @@ Add annotation with true:
 
 **3. Build Image**
 
-- You can use `Docker` or `Azure Pipeline` to build image
+- `docker build`
 
 **4. Deploy to k8s**
 
