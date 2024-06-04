@@ -33,15 +33,3 @@ Add annotation with true:
 - `helm install auto-resize ./`
 
 
-## Workflow
-```mermaid
-graph TD;
-    A[Start] --> B{Watch for StatefulSet changes};
-    B --> C[Process StatefulSet events];
-    C --> D{Check PVCs and disk usage};
-    D --> |Disk usage exceeds threshold| E[Adjust PVC size];
-    D --> |Disk usage is normal| B
-    E --> G[Update PVC size in StatefulSet object];
-    G --> H[Patch StatefulSet in Kubernetes API];
-    H --> B;
-```
