@@ -30,17 +30,4 @@ Add annotation with new size:
 - `helm install resize-statefulset-operator ./`
 
 
-## Workflow
-```mermaid
-graph TD;
-    A[Start] --> B{StatefulSet Change Event?};
-    B -- Yes --> C[Retrieve StatefulSet Information];
-    C --> D{PVC Resizing Annotations Present?};
-    D -- Yes --> E[Compare Requested Size with Current Size];
-    E -- Size Adjustment Necessary --> F[Update PVC Size];
-    F --> G[Create or Update ConfigMap];
-    G --> H[Delete Original StatefulSet];
-    H --> I[Create New StatefulSet];
-    I --> B;
-    D -- No --> B;
-```
+
